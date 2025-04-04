@@ -216,7 +216,7 @@ function moldarInfo() {
         info2 = "Cartão"
     }
     if (pix) {
-        info2 = "Pix%0A(envie%20para%2016993383633)%0AFavor%20enviar%20o%20comprovante"
+        info2 = "Pix%0A(envie%20para%20chave%20:%20128.249.89/0001-37)%0AFavor%20enviar%20o%20comprovante"
     }
     if (dinheiro) {
         let troco = parseFloat(get('troco').value) - totalPedido;
@@ -286,7 +286,7 @@ function verifica() {
         if (dinheiro) {
             if (get('troco').value == "" || parseFloat(get('troco').value) < totalPedido) {
                 verificado = false;
-                alert("Valor para troco inválido");
+                alert("Valor para troco inferior ao total pedido.");
             }
         }
     }
@@ -466,7 +466,7 @@ function pedir(id, ext, inclusos) {
         montarExtras(ext, inclusos);
     }
     else {
-        alert("Agradecemos a preferência, abriremos as 14h30");
+        alert("Agradecemos a preferência, abriremos as 08h00");
     }
 }
 
