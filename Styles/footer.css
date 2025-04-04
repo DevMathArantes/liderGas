@@ -1,0 +1,23 @@
+/*Footer*/
+footer{
+    background-color: var(--cor1);
+    color: var(--cor2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3em 1em;
+}
+footer h2{
+    border-radius: 10px;
+    border: 2px solid var(--cor2);
+    padding: 0 3em;
+    font-size: 2rem;
+}
+footer a img{
+    width: 1em;
+}
+footer a{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}

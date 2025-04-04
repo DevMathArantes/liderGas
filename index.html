@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Líder gás & água</title>
+    <link rel="web icon" href="Assets/Imagens/logo.jpg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!--Início da página-->
+    <header>
+
+        <!--Nav principal-->
+        <nav>
+
+            <h2 id="status"></h2>
+            <input class="abrirListaEscondida" id="abrirNav" type="checkbox">
+            <label for="abrirNav"></label>
+
+            <!--Links-->
+            <ul id="links" class="listaEscondida">
+                <li>
+                    <a href="https://wa.me/5516991774715">
+                        <img src="Assets/icons/whatsapp.png" alt="icone whatsApp">
+                        Contato
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/omelhordoacai?igsh=emJlOWdvaHF4cWQ2">
+                        <img src="Assets/icons/instagram.png" alt="icone instagram">
+                        Seguir
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.google.com/maps/place/L%C3%ADder+G%C3%A1s+e+%C3%81gua/@-20.0475694,-47.7532092,17z/data=!3m1!4b1!4m6!3m5!1s0x94ba8d5abcbe7df9:0x343d978ee1ecea3d!8m2!3d-20.0475694!4d-47.7532092!16s%2Fg%2F11b7hhd3zt?entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D">
+                        <img src="Assets/icons/local.png" alt="icone local">
+                        Endereço
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+
+        <!--Apresentação-->
+       <div class="inicio"></div>
+        
+       <!--Título da página-->
+        <h1>Lider gás & água</h1>
+
+    </header>
+
+    <!--Conteúdo principal-->
+    <main>
+
+        <!--Card expositivo-->
+        <section class="cardExpositivo">
+            <h2>FAÇA JÁ O SEU PEDIDO !</h2>
+        </section>
+
+        <ul id="produtos0" class="carrossel"></ul>
+        <ul id="produtos1" class="carrossel"></ul>        
+
+        <!--Card expositivo-->
+        <section class="cardExpositivo">
+            <img src="Assets/Imagens/ambiente6.jpg" alt="imagem do ambiente empório do açai">
+            <div class="cardInfo">
+                <h2>Passo a passo para trocar o butijão</h2>
+                <p>
+                    <br><br>1- Desligue o registro. ...
+                    <br><br>2- Transporte os botijões na vertical. ...
+                    <br><br>3- Higienize o botijão. ...
+                    <br><br>4- Leia a etiqueta. ...
+                    <br><br>5- Remova o lacre com cuidado. ...
+                    <br><br>6- Retire o regulador de pressão. ...
+                    <br><br>7- Faça o teste de vazamento. ...
+                    <br><br>8- Se o vazamento continuar, peça ajuda especializada.
+                </p>    
+            </div>
+        </section>
+
+        <!--Modal utilizado para montagem de itens-->
+        <section id="montar" class="modal montar"></section>
+
+        <!--Modal utilizado para finalizar o pedido-->
+        <button id="verPedido" onclick="dijuntor('finalizar')" class="btnFinalizar">
+            Pedido
+            <img src="Assets/icons/finalizar.png" alt="icone finalizar">
+        </button>
+
+        <!--Modal para finalizar o pedido-->
+        <section id="finalizar" class="modal finalizar">
+            
+            <!--Botão para voltar-->
+            <button id="sairPedido" onclick="dijuntor('finalizar')" class="voltar">
+                <img src="Assets/icons/voltar.png" alt="icone voltar">
+                Voltar
+            </button>
+
+            <!--Fundo estético-->
+            <div class="fundoFinalizar"></div>
+            <h2>AGRADECEMOS A PREFERÊNCIA</h2>
+
+            <!--Lista de produtos-->
+            <ul class="listaPedido" id="listaPedido"></ul>
+
+            <!--Formulário-->
+            <div id="formulario" class="formulario">
+                
+                <h2>Preencha o formulário</h2>
+                <input id="nome" type="text" placeholder="Nome">
+
+                <!--Aonde resgatar-->
+                <h3>Resgate do pedido</h3>
+                <p>Taxa de entrega: R$ <i id="taxaEntrega"></i></p>
+                <input id="end1" type="text" placeholder="Bairro">
+                <input id="end2" type="text" placeholder="Rua">
+                <input id="end3" type="text" placeholder="Número">
+                <input id="end4" type="text" placeholder="Complemento">
+
+                <!--Pagamento-->
+                <h3>Forma de pagamento</h3>
+                <div class="radio">
+                    <input name="pagamento" type="radio" id="cartao">
+                    <label for="cartao">Cartão</label>
+                </div>
+                <div class="radio">
+                    <input name="pagamento" type="radio" id="pix">
+                    <label for="pix">Pix</label>
+                </div>
+                <div class="radio">
+                    <input name="pagamento" type="radio" class="abrirListaEscondida" id="dinheiro">
+                    <label for="dinheiro">Dinheiro</label>
+                    <div class="listaEscondida">
+                        <p>Valor para troco</p>
+                        <input id="troco" type="number">
+                    </div>
+                </div>
+
+                <!--Gerar link-->
+                <h3>Quase lá !</h3>
+                <button onclick="gerarLink()">Gerar link</button>
+
+                <h3>A MELHOR QUALIDADE</h3>
+                <img src="Assets/Imagens/logo.jpg" alt="logo empório do açai">
+                <p>
+                    Rua Major Nicolau Bartolomeu, 671 / Jamil Mattar - Igarapava (SP) 
+                    <br>
+                    Segunda a Sabádo: 08h00 a 19h00, Domingo: 08h00 a 11h45 
+                </p>
+
+            </div>
+
+            <div class="linkFinal" id="linkFinal"></div>
+
+        </section>
+
+    </main>
+    
+    <!--Final da página-->
+    <footer>
+        <p>Developed by Matheus Arantes Ferreira</p>
+        <h2>MAF</h2>
+        <a>
+            Acesse nosso site 
+            <img src="Assets/icons/link.png" alt="icone link">
+        </a>
+    </footer>
+
+    <!--Scripts-->
+    <script src="script.js"></script>
+</body>
+
+</html>

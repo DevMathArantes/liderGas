@@ -1,0 +1,298 @@
+/*Cardápio*/
+.cardapio{
+    display: none;
+    z-index: 2;
+    flex-flow: row wrap;
+    padding-top: 2em;
+}
+.abrirCardapio{
+    color: var(--cor2);
+    background-size: 100%;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-shadow: 0px 0px 10px var(--cor4);
+    background-blend-mode: multiply;
+    background-color: var(--cor6);
+    width: 100%;
+    box-shadow: 0px 0px 5px var(--cor4);
+}
+.cardapio label span{
+    width: 100%;
+    text-align: center;
+    background-image: url(../Assets/icons/setaDireita.png);
+    background-size: 1em;
+    background-repeat: no-repeat;
+    background-position: 80%;
+    padding: 1em;
+}
+.cardapio input:checked + label > span{
+    background-image: url(../Assets/icons/setaBaixo.png);
+}
+
+/*Label dentro da categoria*/
+.labelMenor{
+    width: 16em;
+    background-color: var(--cor1);
+    padding: 0.5em;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px var(--cor3);
+    background-image: url(../Assets/icons/setaDireita.png);
+    background-size: 1em;
+    background-repeat: no-repeat;
+    background-position: 90%;
+    text-align: center;
+    color: var(--cor2);
+}
+.cardapio input:checked + .labelMenor{
+    background-image: url(../Assets/icons/setaBaixo.png);
+}
+
+
+/*Organização de produtos*/
+.carrossel{
+    display: flex;
+    overflow: auto;
+    justify-content: space-around;
+    gap: 1em;
+    padding: 2em 1em;
+    width: 100%;
+}
+.carrossel li{
+    width: 9em;
+    box-shadow: 0px 5px 10px var(--cor3);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 0.5em;
+    padding: 1em;
+    background-color: var(--cor2);
+}
+.carrossel li img{
+    width: 100%;
+    border-radius: 10px;
+}
+.carrossel li h3, .carrossel li p{
+    width: 9em;
+    text-align: center;
+    padding: 0 0.5em;
+    margin: 0;
+}
+.carrossel li h3{
+    font-size: 1rem;
+}
+.carrossel li p{
+    width: 100%;
+    font-size: 0.6rem;
+    color: var(--cor1);
+}
+.carrossel li span{
+    color: var(--cor1);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.carrossel li button{
+    width: 10em;
+    border-radius: 5px;
+    border: 0;
+    background-color: var(--cor1);
+    color: var(--cor2);
+    padding: 0.5em 2em;
+}
+
+.listas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 2em;
+    padding: 2em 0;
+}
+.lista{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 1em;
+    gap: 1em;
+    width: 100%;
+}
+.lista h3{
+    width: 60%;
+    font-size: 1rem;
+    color: var(--cor1);
+}
+.lista img{
+    width: 35%;
+}
+.lista li{
+    box-shadow: 0px 5px 10px var(--cor3);
+    width: 18em;
+    border-radius: 10px;
+    padding: 0.5em;
+    display: flex;
+    flex-flow: row wrap;
+    background-color: var(--cor2);
+}
+.lista li span{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--cor1);
+    width: 60%;
+    text-align: right;
+    padding-right: 1em;
+}
+.lista li button{
+    width: 40%;
+    padding: 0.5em 2em;
+    border-radius: 5px;
+    border: 0;
+    background-color: var(--cor1);
+    color: var(--cor2);
+}
+.lista li p{
+    width: 100%;
+}
+
+.grande{
+    padding: 2em 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.grande li{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.grandeInfo{
+    width: 18em;
+    display: flex;
+    background-color: var(--cor2);
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+    padding: 1em;
+    box-shadow: 0px 0px 5px var(--cor3);
+}
+.grandeInfo button{
+    width: 12em;
+    background-color: var(--cor1);
+    color: var(--cor2);
+    border: 0;
+    padding: 0.5em  2em;
+    border-radius: 5px;
+}
+.grandeInfo span{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--cor1);
+}
+.grandeInfo img{
+    width: 4em;
+}
+.grandeImg{
+    width: 18em;
+    box-shadow: 0px 0px 5px var(--cor3);
+}
+
+/*Pizza 2 sabores*/
+.metadeFinal{
+    display: none;
+}
+.metade{
+    width: 100%;
+    list-style: 0;
+    padding: 2em 1em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.metade input{
+    list-style: none;
+}
+.metade li{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.metade p{
+    width: 100%;
+    font-size: 0.8rem;
+}
+.metade span{
+    color: var(--cor2);
+    background-color: var(--cor1);
+    padding: 0.5em 2em;
+    border-radius: 10px;
+    font-weight: 400;
+}
+.metade label{
+    font-size: 1rem;
+    padding-left: 0.5em;
+    color: var(--cor1);
+    font-weight: 500;
+}
+.listaOpc{
+    list-style: none;
+    padding: 1em;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    gap: 2em;
+}
+.listaOpc li{
+    width: 20em;
+    border-bottom: 2px solid var(--cor1);
+    box-shadow: 0px 5px 10px var(--cor3);
+    padding: 1em;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+.opcTit{
+    width: 100%;
+}
+
+/*Fundos das categorias*/
+
+.acai{
+    height: 25vh;
+}
+.combos{
+    background-image: url(../Assets/Imagens/acai.jpg);
+}
+.copos{
+    background-image: url(../Assets/Imagens/copoAcai.jpg);
+}
+.barcas{
+    background-image: url(../Assets/Imagens/barca.jpg);
+}
+.tigelas{
+    background-image: url(../Assets/Imagens/tigelaAcai.jpg);
+}
+
+.sorvete{
+    height: 25vh;
+}
+.litros{
+    background-image: url(../Assets/Imagens/litros1.jpg);
+}
+.bolas{
+    background-image: url(../Assets/Imagens/bolas1.jpg);
+}
+.tacas{
+    background-image: url(../Assets/Imagens/sorvetes.jpg);
+}
+.milks{
+    background-image: url(../Assets/Imagens/milkShakes.jpg);
+}

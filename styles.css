@@ -1,0 +1,89 @@
+/*Fontes________________________________________________________________________________________________________*/
+
+@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/*Estilos_______________________________________________________________________________________________________*/
+@import url('Styles/header.css');
+@import url('Styles/main.css');
+@import url('Styles/footer.css');
+@import url('Styles/cardapio.css');
+@import url('Styles/montar.css');
+@import url('Styles/finalizar.css');
+
+/*Variáveis_____________________________________________________________________________________________________*/
+
+:root{
+    --fontTitulos: "Parkinsans", sans-serif;
+    --fontPadrao: "Rubik", sans-serif;
+    --cor1: #1a0c57;
+    --cor2: #ffffff;
+    --cor3: #303030;
+    --cor4: #000000;
+    --cor5: #07004b;
+    --cor6: rgba(0, 0, 0, 0.5);
+    --cor7: #f1f1f1;
+}
+
+/*Regras_________________________________________________________________________________________________________*/
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background-color: var(--cor7);
+}
+a, h1, h2, h3, h4, h5, h6, button, label, input{
+    font-family: var(--fontTitulos);
+}
+a{
+    text-decoration: none;
+}
+p, span{
+    font-family: var(--fontPadrao);
+}
+
+/*Curingas_______________________________________________________________________________________________________*/
+
+.listaEscondida{
+    display: none;
+}
+.abrirListaEscondida{
+    display: none;
+}
+.abrirListaEscondida:checked + label + .listaEscondida{
+    display: flex;
+}
+
+.modal{
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--cor2);
+}
+
+.voltar{
+    position: fixed;
+    top: 5em;
+    left: 0;
+    background-color: var(--cor1);
+    width: 10em;
+    padding: 1em 2em;
+    color: var(--cor2);
+    border: 0;
+    border-radius: 0 5px 5px 0;
+    box-shadow: 0px 5px 5px var(--cor3);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    z-index: 3;
+}
+.voltar img{
+    width: 1em;
+}

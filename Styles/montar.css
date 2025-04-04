@@ -1,0 +1,121 @@
+/*Painel para montar o produto*/
+.montar{
+    display: none;
+    padding: 3em 0;
+    z-index: 3;
+    background-color: var(--cor2);
+    flex-direction: column;
+    align-items: center;
+}
+.montar h2{
+    text-align: center;
+    color: var(--cor2);
+    background-color: var(--cor1);
+    margin: 0;
+    padding: 0.5em;
+    font-size: 1rem;
+    width: 100%;
+}
+.montarInfo{
+    background-color: var(--cor2);
+    padding: 1em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    width: 90%;
+}
+.abrirExtra{
+    background-color: var(--cor1);
+    color: var(--cor2);
+    width: 18em;
+    text-align: center;
+    padding: 0.5em;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px var(--cor3);
+    background-image: url(../Assets/icons/setaDireita.png);
+    background-repeat: no-repeat;
+    background-size: 1em;
+    background-position: 15em;
+}
+#listaExtras:checked + label + #extras{
+    display: flex;
+}
+#listaExtras:checked + .abrirExtra{
+    background-image: url(../Assets/icons/setaBaixo.png);
+}
+.montar h3{
+    color: var(--cor1);
+    margin: 0;
+}
+.montar p{
+    margin: 0;
+    text-align: center;
+}
+.montar span{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--cor1);   
+}
+.btnMontar{
+    width: 20em;
+    background-color: var(--cor1);
+    color: var(--cor2);
+    border-radius: 10px;
+    border: 0;
+    padding: 1em 2em;
+    margin-bottom: 5em;
+}
+.lembrete{
+    width: 20em;
+    padding: 1em;
+    border-radius: 10px;
+    border: 0;
+    box-shadow: 0px 3px 10px var(--cor3);
+}
+.montar ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 100%;
+    gap: 1em;
+}
+
+/*Extras*/
+#extras{
+    display: none;
+    flex-flow: row wrap;
+    width: 100%;
+}
+.extra{
+    width: 20em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px var(--cor3);
+}
+.extra label{
+    width: 18em;
+    padding: 0 1em;
+    font-size: 0.7rem;
+}
+.extra span{
+    width: 6em;
+    font-size: 0.7rem;
+}
+.extra input{
+    margin: 0;
+    width: 1em;
+}
+
+/*Fundo estético*/
+.fundoPedido{
+    width: 100%;
+    background-image: url(../Assets/Imagens/ambiente4.jpg);
+    padding: 7em;
+    background-size: 100%;
+}

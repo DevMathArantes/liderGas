@@ -1,0 +1,221 @@
+/*Modal + botão para abrir a aba finalizar*/
+.finalizar{
+    z-index: 4;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+.btnFinalizar{
+    position: fixed;
+    top: 5em;
+    right: 0;
+    background-color: var(--cor1);
+    width: 10em;
+    padding: 1em 2em;
+    color: var(--cor2);
+    border: 0;
+    border-radius: 5px 0 0 5px;
+    box-shadow: 0px 5px 5px var(--cor3);
+    font-weight: 600;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    z-index: 3;
+}
+.btnFinalizar img{
+    width: 1em;
+}
+.finalizar h2{
+    margin: 0;
+    font-size: 1rem;
+    text-align: center;
+    padding: 1em;
+    background-color: var(--cor1);
+    color: var(--cor2);
+    width: 100%;
+}
+.finalizar {
+    text-align: center;
+    font-size: 0.7rem;
+    margin: 0;
+    color: var(--cor1);
+}
+.finalizar img{
+    width: 16em;
+    margin: 0 auto;
+}
+.finalizar p{
+    width: 100%;
+}
+
+/*Fundo vazio com background image*/
+.fundoFinalizar{
+    width: 100%;
+    background-image: url(../Assets/Imagens/ambiente8.jpg);
+    padding: 7em;
+    background-size: 100%;
+}
+
+/*Lista dos produtos*/
+.listaPedido{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    list-style: none;
+    padding: 1em;
+    gap: 1em;
+    justify-content: center;
+}
+.listaPedido li{
+    width: 20em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+    box-shadow: 0px 5px 10px var(--cor3);
+    border-radius: 10px;
+    justify-content: space-around;
+}
+.listaPedido h3{
+    color: var(--cor1);
+}
+.listaPedido p{
+    font-size: 0.7rem;
+    text-align: left;
+}
+.listaPedido span{
+    font-weight: 500;
+    color: var(--cor1);
+    font-size: 1.2rem;
+}
+.listaPedido button{
+    background-color: var(--cor1);
+    color: var(--cor2);
+    border: 0;
+    width: 15em;
+    padding: 0.5em;
+    border-radius: 10px;
+    background-image: url(../Assets/icons/lixo.png);
+    background-repeat: no-repeat;
+    background-size: 1.5em;
+    background-position: 13em;
+}
+.adicional{
+    width: 20em;
+    padding: 0.5em;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--cor1);
+    align-items: center;
+}
+.adicional span{
+    font-size: 0.6rem;
+    color: var(--cor2);
+    background-color: var(--cor1);
+    padding: 0.5em;
+    border-radius: 5px;
+    width: 8em;
+    margin-left: 1em;
+}
+
+/*Formulário*/
+.formulario{
+    background-color: var(--cor1);
+    color: var(--cor2);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 2em;
+    padding: 2em 0;
+}
+.formulario h2, .formulario h3{
+    width: 100%;
+}
+.formulario h3{
+    border-bottom: 1px solid var(--cor2);
+    padding: 1em;
+}
+.formulario input{
+    width: 20em;
+    padding: 0.5em;
+    border-radius: 10px;
+    border: 0;
+}
+.formulario button{
+    background-color: var(--cor1);
+    color: var(--cor2);
+    border: 1px solid var(--cor2);
+    padding: 1em;
+    box-shadow: 0px 5px 10px var(--cor3);
+    border-radius: 10px;
+    background-image: url(../Assets/icons/download.png);
+    background-repeat: no-repeat;
+    background-size: 1.5em;
+    background-position: 5em;
+}
+.formulario button:hover{
+    background-color: var(--cor2);
+    color: var(--cor1);
+}
+.formulario img{
+    width: 15em;
+    border: 2px solid var(--cor2);
+    border-radius: 50%;
+}
+.formulario p{
+    padding: 2em 1em;
+}
+.radio{
+    width: 20em;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.radio label{
+    width: 17em;
+    text-align: left;
+}
+.radio input{
+    margin: 0;
+    width: 1em;
+}
+#entrega, #dinheiro{
+    display: block;
+}
+.formulario button{
+    width: 20em;
+}
+.radio .listaEscondida input{
+    width: 20em;
+}
+.radio .listaEscondida{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1em;
+    padding: 1em ;
+}
+
+/*Link final*/
+.linkFinal{
+    width: 20em;
+    margin-top: 8em;
+    display: none;
+}
+.linkFinal a{
+    width: 100%;
+    background-color: var(--cor1);
+    color: var(--cor2);
+    padding: 1em;
+    background-image: url(../Assets/icons/enviar.png);
+    background-repeat: no-repeat;
+    background-size: 1.2em;
+    background-position: 14em;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    box-shadow: 0px 5px 5px var(--cor3);
+}
