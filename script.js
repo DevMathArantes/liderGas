@@ -56,34 +56,24 @@ let dia = agora.getDay();
 let fechar;
 let retorno = true;
 function aberto() {
+    if(horas < 8){
+        retorno = false;
+    }
     switch (dia) {
         case 0:
             fechar = 11;
-            if ((horas == fechar) && (minutos > 45)) {
+            if (horas > 11) {
+                retorno = false;
+            }
+            if ((horas == 11) && (minutos > 45)) {
                 retorno = false;
             }
             break;
-        case 1:
-            fechar = 19;
+        default:
+            if (horas >= 19) {
+                retorno = false;
+            }
             break;
-        case 2:
-            fechar = 19;
-            break;
-        case 3:
-            fechar = 19;
-            break;
-        case 4:
-            fechar = 19;
-            break;
-        case 5:
-            fechar = 19;
-            break;
-        case 6:
-            fechar = 19;
-            break;
-    }
-    if ((horas < 8) && (horas >= fechar)) {
-        retorno = false;
     }
     return retorno;
 }
